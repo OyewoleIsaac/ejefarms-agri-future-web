@@ -6,6 +6,12 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send, Globe } from "lucide-react";
 
 export const Contact = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Contact form functionality requires backend integration
+    alert("To enable contact form submissions, please connect your Lovable project to Supabase using the native integration. Click the green Supabase button in the top right of the interface.");
+  };
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -27,40 +33,43 @@ export const Contact = () => {
                 Get in touch to discuss partnerships, investment opportunities, or learn more about our technology
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName">First Name</Label>
-                  <Input id="firstName" placeholder="Your first name" />
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input id="firstName" placeholder="Your first name" required />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input id="lastName" placeholder="Your last name" required />
+                  </div>
                 </div>
+                
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name</Label>
-                  <Input id="lastName" placeholder="Your last name" />
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="your.email@company.com" required />
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="your.email@company.com" />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="company">Company</Label>
-                <Input id="company" placeholder="Your company name" />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Tell us about your interest in Ejefarms..."
-                  className="min-h-[120px]"
-                />
-              </div>
-              
-              <Button variant="cta" size="lg" className="w-full">
-                <Send className="mr-2 h-5 w-5" /> Send Message
-              </Button>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="company">Company</Label>
+                  <Input id="company" placeholder="Your company name" />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Tell us about your interest in Ejefarms..."
+                    className="min-h-[120px]"
+                    required
+                  />
+                </div>
+                
+                <Button type="submit" variant="cta" size="lg" className="w-full">
+                  <Send className="mr-2 h-5 w-5" /> Send Message
+                </Button>
+              </form>
             </CardContent>
           </Card>
 

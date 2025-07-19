@@ -36,22 +36,22 @@ export const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">180+</div>
-            <div className="text-sm opacity-80">Clients Served</div>
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+          <div className="text-center p-4 bg-background/10 rounded-xl backdrop-blur-sm">
+            <div className="text-2xl md:text-4xl font-bold text-accent">180+</div>
+            <div className="text-xs md:text-sm opacity-80">Clients Served</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">24</div>
-            <div className="text-sm opacity-80">Hectare Plantation</div>
+          <div className="text-center p-4 bg-background/10 rounded-xl backdrop-blur-sm">
+            <div className="text-2xl md:text-4xl font-bold text-accent">24</div>
+            <div className="text-xs md:text-sm opacity-80">Hectare Plantation</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">25</div>
-            <div className="text-sm opacity-80">Ongoing Projects</div>
+          <div className="text-center p-4 bg-background/10 rounded-xl backdrop-blur-sm">
+            <div className="text-2xl md:text-4xl font-bold text-accent">25</div>
+            <div className="text-xs md:text-sm opacity-80">Ongoing Projects</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">$25K</div>
-            <div className="text-sm opacity-80">Pre-seed Funding</div>
+          <div className="text-center p-4 bg-background/10 rounded-xl backdrop-blur-sm">
+            <div className="text-2xl md:text-4xl font-bold text-accent">$25K</div>
+            <div className="text-xs md:text-sm opacity-80">Pre-seed Funding</div>
           </div>
         </div>
       </div>

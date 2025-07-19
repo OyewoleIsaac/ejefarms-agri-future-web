@@ -65,7 +65,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-muted/20 pt-8 flex flex-col md:flex-row items-center justify-between">
           <div className="text-muted text-sm mb-4 md:mb-0">
-            © 2024 Ejefarms. All rights reserved.
+            © 2025 Ejefarms. All rights reserved.
           </div>
           <div className="flex space-x-6 text-muted text-sm">
             <a href="#" className="hover:text-background transition-colors">Privacy Policy</a>

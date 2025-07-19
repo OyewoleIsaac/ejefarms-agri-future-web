@@ -61,45 +61,54 @@ export const Solution = () => {
         </div>
 
         {/* Technology Integration Visual */}
-        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4 text-foreground">
-              Complete Technology <span className="text-primary">Integration</span>
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From seed to sale, every step is optimized with cutting-edge technology
-            </p>
+        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-12 max-w-6xl mx-auto relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-4 left-4 w-20 h-20 bg-primary rounded-full"></div>
+            <div className="absolute bottom-4 right-4 w-16 h-16 bg-secondary rounded-full"></div>
+            <div className="absolute top-1/2 left-1/3 w-12 h-12 bg-accent rounded-full"></div>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-bold">1</div>
-                <div>
-                  <h4 className="font-semibold text-foreground">AI-Powered Plantation Management</h4>
-                  <p className="text-muted-foreground text-sm">Real-time monitoring and predictive analytics</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground text-sm font-bold">2</div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Blockchain Supply Chain</h4>
-                  <p className="text-muted-foreground text-sm">Transparent tracking from farm to consumer</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground text-sm font-bold">3</div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Integrated Marketplace</h4>
-                  <p className="text-muted-foreground text-sm">Direct access to buyers and farmers</p>
-                </div>
-              </div>
+          
+          <div className="relative z-10">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold mb-4 text-foreground">
+                Complete Technology <span className="text-primary">Integration</span>
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                From seed to sale, every step is optimized with cutting-edge technology
+              </p>
             </div>
 
-            <div className="text-center">
-              <Button variant="cta" size="lg" className="text-lg px-8 py-4">
-                Explore Our Technology <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-bold">1</div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">AI-Powered Plantation Management</h4>
+                    <p className="text-muted-foreground text-sm">Real-time monitoring and predictive analytics</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-secondary-foreground text-sm font-bold">2</div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Blockchain Supply Chain</h4>
+                    <p className="text-muted-foreground text-sm">Transparent tracking from farm to consumer</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-accent-foreground text-sm font-bold">3</div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Integrated Marketplace</h4>
+                    <p className="text-muted-foreground text-sm">Direct access to buyers and farmers</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Button variant="cta" size="lg" className="text-lg px-8 py-4">
+                  Explore Our Technology <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>

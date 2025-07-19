@@ -1,6 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Leaf, Zap, Droplets, ShoppingCart } from "lucide-react";
+import palmOilProducts from "@/assets/palm-oil-products.jpg";
+import smartPlantation from "@/assets/smart-plantation.jpg";
+import blockchainTraceability from "@/assets/blockchain-traceability.jpg";
 
 export const Products = () => {
   const products = [
@@ -69,28 +72,40 @@ export const Products = () => {
           ))}
         </div>
 
-        {/* Market Opportunity */}
-        <div className="bg-gradient-earth rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold mb-6 text-accent-foreground">
-            Massive Market Opportunity
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <div className="text-4xl font-bold text-accent-foreground mb-2">$77B</div>
-              <div className="text-accent-foreground/80">Global Market (2025)</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-accent-foreground mb-2">$115B</div>
-              <div className="text-accent-foreground/80">Projected (2033)</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-accent-foreground mb-2">400K+</div>
-              <div className="text-accent-foreground/80">MT Annual Demand Gap</div>
-            </div>
+        {/* Market Opportunity with Visual */}
+        <div className="relative bg-gradient-earth rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img 
+              src={palmOilProducts} 
+              alt="Premium palm oil products"
+              className="w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-earth/90"></div>
           </div>
-          <p className="text-lg text-accent-foreground/90 max-w-2xl mx-auto">
-            Nigeria's unmet demand creates unprecedented opportunities for sustainable, technology-driven palm oil production
-          </p>
+          
+          <div className="relative z-10">
+            <h3 className="text-3xl font-bold mb-6 text-accent-foreground">
+              Massive Market Opportunity
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <div className="text-4xl font-bold text-accent-foreground mb-2">$77B</div>
+                <div className="text-accent-foreground/80">Global Market (2025)</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-accent-foreground mb-2">$115B</div>
+                <div className="text-accent-foreground/80">Projected (2033)</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-accent-foreground mb-2">400K+</div>
+                <div className="text-accent-foreground/80">MT Annual Demand Gap</div>
+              </div>
+            </div>
+            <p className="text-lg text-accent-foreground/90 max-w-2xl mx-auto">
+              Nigeria's unmet demand creates unprecedented opportunities for sustainable, technology-driven palm oil production
+            </p>
+          </div>
         </div>
       </div>
     </section>

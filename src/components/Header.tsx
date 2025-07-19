@@ -50,32 +50,37 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 rounded-lg hover:bg-muted/50 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-foreground" />
+            ) : (
+              <Menu className="h-6 w-6 text-foreground" />
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border/50">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border/50 shadow-medium animate-fade-in-up">
+            <nav className="flex flex-col py-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors px-4 py-2"
+                  className="text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors px-6 py-3"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-border/20">
-                <Button variant="ghost" className="justify-start">
+              <div className="flex flex-col space-y-3 px-6 pt-4 border-t border-border/20 mt-2">
+                <Button variant="ghost" className="justify-start h-12">
                   Sign In
                 </Button>
-                <Button variant="cta" className="justify-start">
+                <Button variant="cta" className="justify-start h-12">
                   Partner With Us
                 </Button>
               </div>
