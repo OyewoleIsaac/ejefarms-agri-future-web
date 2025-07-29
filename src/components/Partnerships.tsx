@@ -5,32 +5,38 @@ export const Partnerships = () => {
     {
       name: "IBM",
       role: "Blockchain Traceability Partner",
-      description: "Powering our supply chain transparency with enterprise blockchain solutions"
+      description: "Powering our supply chain transparency with enterprise blockchain solutions",
+      logo: "https://logos-world.net/wp-content/uploads/2020/09/IBM-Logo.png"
     },
     {
       name: "NVIDIA",
       role: "AI for Precision Agriculture",
-      description: "Advanced AI computing for crop monitoring and yield optimization"
+      description: "Advanced AI computing for crop monitoring and yield optimization",
+      logo: "https://logos-world.net/wp-content/uploads/2020/11/Nvidia-Logo.png"
     },
     {
       name: "AWS",
       role: "Cloud Infrastructure",
-      description: "Scalable cloud platform supporting our IoT and data analytics needs"
+      description: "Scalable cloud platform supporting our IoT and data analytics needs",
+      logo: "https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png"
     },
     {
       name: "Microsoft",
       role: "Technology Partner",
-      description: "Enterprise solutions and development tools"
+      description: "Enterprise solutions and development tools",
+      logo: "https://logos-world.net/wp-content/uploads/2020/04/Microsoft-Logo.png"
     },
     {
       name: "MongoDB",
       role: "Database Solutions",
-      description: "Modern database platform for agricultural data management"
+      description: "Modern database platform for agricultural data management",
+      logo: "https://logos-world.net/wp-content/uploads/2021/08/MongoDB-Logo.png"
     },
     {
       name: "atlas.ti",
       role: "Analytics Partner",
-      description: "Advanced analytics and data visualization tools"
+      description: "Advanced analytics and data visualization tools",
+      logo: "https://via.placeholder.com/100x40/4B5563/FFFFFF?text=atlas.ti"
     }
   ];
 
@@ -50,8 +56,15 @@ export const Partnerships = () => {
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="bg-card p-6 rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 border border-border/50 group hover:scale-[1.02]"
+              className="bg-card p-6 rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 border border-border/50 group hover:scale-[1.02] relative"
             >
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={partner.logo} 
+                  alt={`${partner.name} logo`}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-card-foreground mb-2">{partner.name}</h3>
                 <Badge variant="secondary" className="mb-3">{partner.role}</Badge>

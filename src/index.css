@@ -42,11 +42,7 @@ All colors MUST be HSL.
     --input: 214 32% 91%;
     --ring: 142 76% 36%;
 
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%), hsl(217 91% 60%));
-    --gradient-tech: linear-gradient(135deg, hsl(217 91% 60%), hsl(220 13% 18%));
-    --gradient-earth: linear-gradient(135deg, hsl(35 82% 65%), hsl(142 76% 36%));
+    /* Custom gradients - Removed for solid green preference */
 
     /* Shadows */
     --shadow-soft: 0 2px 10px -2px hsl(142 76% 36% / 0.1);
@@ -122,5 +118,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'SF Pro Display', 'Inter', system-ui, sans-serif;
   }
 }

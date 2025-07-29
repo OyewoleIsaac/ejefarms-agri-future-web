@@ -70,11 +70,8 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-tech': 'var(--gradient-tech)',
-				'gradient-earth': 'var(--gradient-earth)'
+			fontFamily: {
+				'sans': ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
